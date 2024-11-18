@@ -50,7 +50,7 @@ export default function RootLayout({
         <section className="m-5">{children}</section>
         {/* area footer */}
         <footer className=" flex justify-center bg-color1 text-color3-1 py-15X">
-          Copyright &copy; 2024 - Tias Haikal Mulyana
+          Copyright &copy; 2024 - Tias Haikal Mulyana . com
         </footer>
       </body>
     </html>
