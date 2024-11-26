@@ -27,6 +27,7 @@ export default function RootLayout({
             alt="Logo UTI"
             width={320}
             height={60}
+            priority
           ></Image>
 
           {/* area menu */}
@@ -49,8 +50,8 @@ export default function RootLayout({
         {/*area content*/}
         <section className="m-5">{children}</section>
         {/* area footer */}
-        <footer className=" flex justify-center bg-color1 text-color3-1 py-15X">
-          Copyright &copy; 2024 - Tias Haikal Mulyana . com
+        <footer className=" flex justify-center bg-color1 text-white py-15X">
+          Copyright &copy; 2024 - Tias Haikal Mulyana
         </footer>
       </body>
     </html>
