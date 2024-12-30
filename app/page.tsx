@@ -1,6 +1,6 @@
 "use client";
 
-import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPencil, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -10,10 +10,13 @@ import { getData, setUpdateStatus } from "./models/mahasiswa";
 async function setDelete(npm: string, nama: string) {
   if (confirm(`Data Mahasiswa: ${npm} - ${nama} Ingin Dihapus?`) == true) {
     // alert("Ok");
-    await setUpdateStatus();
+    await setUpdateStatus(npm);
+    alert(`Data Mahasiswa: ${npm} - ${nama} Berhadsil dihapus`);
+    //reload
+    location.reload();
   }
   // else {
-  //   alert("Cancel");
+
   // }
 }
 
@@ -33,6 +36,13 @@ export default function Rootpage() {
 
   return (
     <>
+      <nav className="text-center mb-5 flex justify-end ">
+        <title>View Data Mahasiswa</title>
+        <Link className="btn btn-outline" href={"/add"}>
+          <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+          Tambah Data Mahasiswa
+        </Link>
+      </nav>
       {/* Tampilkan data mahasiswa */}
       <table className="w-full">
         <thead>

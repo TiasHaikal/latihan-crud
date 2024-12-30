@@ -15,22 +15,25 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'color1' : '#1E2A5E',
-        'color2' : '#E1D7B7',
-        'color3' : {
-          '1' : '#7C93C3',
-          '2' : '#55679C',
-        }
+        color1: "#1E2A5E",
+        color2: "#E1D7B7",
+        color3: {
+          "1": "#7C93C3",
+          "2": "#55679C",
+        },
       },
-      spacing : {
-        '5X' : '5px',
-        '15X' : '15px',
-        '25X' : '25px',
-        '10%' : '10%',
-        '30%' : '30%',
+      spacing: {
+        "5X": "5px",
+        "15X": "15px",
+        "25X": "25px",
+        "10%": "10%",
+        "30%": "30%",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 };
 export default config;
